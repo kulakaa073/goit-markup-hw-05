@@ -503,18 +503,16 @@
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="modal-input-container">
           <div class="modal-field-wrap">
-            <label class="modal-input-label" for="modal-input-name"
-              >Name
-            </label>
+            <label class="modal-input-label" for="user-name">Name </label>
             <div class="modal-input-wrap">
               <input
                 class="modal-input"
                 type="text"
                 name="modal-input-name"
-                id="modal-input-name"
+                id="user-name"
                 required
               />
-              <svg class="modal-input-icon" width="18" height="18">
+              <svg class="modal-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-name"></use>
               </svg>
             </div>
@@ -552,38 +550,39 @@
               </svg>
             </div>
           </div>
-          <div class="modal-field-wrap">
-            <label class="modal-input-label">Comment </label>
+          <div class="modal-comment-wrap">
+            <label class="modal-input-label" for="user-comment">Comment </label>
             <textarea
               class="modal-input-comment"
-              name="modal-input-comment"
+              name="user-comment"
               rows="5"
               placeholder="Text input"
+              id="user-comment"
             ></textarea>
           </div>
+          <div class="modal-agreement-wrap">
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+            />
+            <label class="modal-checkbox-label" for="user-privacy">
+              <span class="modal-form-checkbox">
+                <svg class="modal-form-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#check-mark"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <span class="modal-privacy-policy-link-span"
+                ><a href="" class="modal-privacy-policy-link" target="_blank"
+                  >Privacy Policy</a
+                ></span
+              ></label
+            >
+          </div>
         </form>
-        <div class="modal-agreement-wrap">
-          <input
-            class="visually-hidden"
-            type="checkbox"
-            name="modal-privacy-policy"
-            id="modal-privacy-policy"
-            value="true"
-          />
-          <label class="modal-checkbox-label" for="modal-privacy-policy">
-            <span class="modal-form-checkbox">
-              <svg class="modal-form-checkbox-icon" width="10" height="10">
-                <use href="./images/icons.svg#check-mark"></use>
-              </svg>
-            </span>
-            I accept the terms and conditions of the
-            <span class="modal-privacy-policy-link-span"
-              ><a href="" class="modal-privacy-policy-link" target="_blank"
-                >Privacy Policy</a
-              ></span
-            ></label
-          >
-        </div>
         <button class="modal-send-button" type="submit">Send</button>
       </div>
     </div>
