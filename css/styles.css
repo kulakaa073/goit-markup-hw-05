@@ -850,7 +850,4 @@ input[type="checkbox"]:checked + .modal-checkbox-label > .modal-form-checkbox {
 .modal-input-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 8px;
-  width: 360px;
 }
