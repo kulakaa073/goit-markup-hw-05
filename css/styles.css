@@ -516,11 +516,6 @@ img {
   margin-right: 80px;
 }
 
-.footer-subscribe {
-  display: flex;
-  flex-direction: column;
-}
-
 .footer-subscribe-description {
   font-size: 16px;
   font-weight: 500;
