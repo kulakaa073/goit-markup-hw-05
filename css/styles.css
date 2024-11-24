@@ -525,8 +525,9 @@ img {
   margin-bottom: 16px;
 }
 
-.footer-subscribe-wrap {
+.footer-subscribe-form {
   display: flex;
+  gap: 24px;
 }
 
 .footer-subscribe-input {
@@ -537,7 +538,10 @@ img {
   border-radius: 4px;
   background-color: #00000000;
   padding: 8px 16px;
-  margin-right: 24px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
 }
 
 .footer-subscribe-input::placeholder {
@@ -549,6 +553,8 @@ img {
 }
 
 .footer-subscribe-button {
+  border-radius: 4px;
+  min-width: 165px;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -561,7 +567,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -573,6 +578,7 @@ img {
 
 .footer-subscribe-icon {
   fill: #ffffff;
+  margin-left: 16px;
 }
 
 .modal {
@@ -580,13 +586,15 @@ img {
   flex-direction: column;
   position: absolute;
   margin: 0 auto;
-  padding: 72px 24px 24px 24px;
+  top: 50%;
+  left: 50%;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   background-color: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f,
     0px 2px 1px 0px #00000033;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button {
@@ -603,26 +611,32 @@ img {
   border-radius: 50%;
   border: 1px solid #0000001a;
   background-color: #e7e9fc;
-  transition: background-color 500ms ease-out, border-width 500ms ease-out;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0;
+  cursor: pointer;
 }
 
-.modal-close-button:hover,
+.modal-close-button:hover {
+  background-color: #404bbf;
+  border: none;
+}
+
 .modal-close-button:focus {
   background-color: #404bbf;
-  border-width: 0px;
+  border: none;
 }
 
 .modal-close-button:active {
   background-color: #404bbf;
-  border-width: 0px;
+  border: none;
 }
 
 .modal-close-icon {
   width: 8px;
   height: 8px;
   fill: #2e2f42;
-  transition: fill 500ms ease-out;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover .modal-close-icon,
@@ -806,12 +820,15 @@ img {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  visibility: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
   opacity: 1;
+  visibility: 1;
   pointer-events: auto;
 }
 
